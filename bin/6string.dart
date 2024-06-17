@@ -32,4 +32,13 @@ void main(List<String> args) {
 
   print(name1);
   print(name2);
+
+  // create long string with multiple line
+  var longString = '''
+    this is longstring
+multiple
+string
+''';
+
+  print(longString);
 }
