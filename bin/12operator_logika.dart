@@ -1,5 +1,4 @@
 void main(List<String> args) {
-
   // ==== logical operator AND ====
   /**
    * 
@@ -19,4 +18,18 @@ void main(List<String> args) {
   print(graduate);
 
   // ==== logical operator OR ====
+  /**
+   * true || true = true;
+   * true || false = true;
+   * false || true = true;
+   * false || false = false;
+   */
+
+  var a = 10; 
+   var b = 12; 
+   var res = (a>b)||(b<10); 
+   
+   print(res);  
+   var res1 =!(a==b); 
+   print(res1); 
 }
