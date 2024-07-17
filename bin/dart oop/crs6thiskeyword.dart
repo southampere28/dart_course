@@ -12,7 +12,13 @@ class Person {
 
   Person.withname(this.name); // using named constructor parameter
 
-  Person.withaddress(this.address);
+  Person.withaddress(String address)
+      : this("Danang", address); // redirect constructor
+
+  Person.withname2(String name) : this(name, ""); // using redirect constructor
+
+  // redirecting named constructor
+  Person.fromJakarta() : this.withaddress('Jakarta');
 }
 
 void main(List<String> args) {
@@ -27,4 +33,14 @@ void main(List<String> args) {
   var person3 = Person.withaddress('Malang');
   print(person3.name);
   print(person3.address);
+
+  // call redirect constructor
+  var person4 = Person.withname2('Pramudya');
+  print(person4.name);
+  print(person4.address);
+
+  // call redirecting named constructor
+  var person5 = Person.fromJakarta();
+  print(person5.name);
+  print(person5.address);
 }
