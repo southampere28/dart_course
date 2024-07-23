@@ -3,7 +3,8 @@ class Customer {
   String lastName = '';
   String fullName = '';
 
-  Customer(this.fullName)
+  Customer(this.fullName) 
+      // Initializer List : Initializer List initializes variables before the constructor body executes
       : firstName = fullName.split(" ")[0],
         lastName = fullName.split(" ")[1] {
     print('Create new customer');
